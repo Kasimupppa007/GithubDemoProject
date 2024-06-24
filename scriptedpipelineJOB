@@ -1,0 +1,39 @@
+#Scripted pipeline JOb code
+node {
+    stage('Build'){
+            echo 'build the pipeline'
+            }
+    stage('Test'){
+            echo'test the process'
+            }
+    stage('deploy'){
+            echo'deploy the process'
+            }
+    }
+.................................................
+declerative pipeline job
+pipeline{
+      agent any
+      stages{
+          stage('Build'){
+              step {
+                  echo 'Build the process ...'
+                  }
+                }
+            stages{
+                stage('test'){
+                      step{
+                          echo'test the proces...'
+                          }
+                        }
+            stages{
+                stage('deploy'){
+                      step{
+                        echo'deploy the process...'
+                        }
+                      }
+
+                  }
+              }
+          }
+        }
